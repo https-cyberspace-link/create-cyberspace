@@ -1,0 +1,35 @@
+$square-width: 32px;
+$main-content-space: 20px;
+$main-content-radius: 16px;
+$normal-space: 24px;
+$first-level-navigation-width: 168px;
+$first-level-navigation-height: 32px;
+$second-level-navigation-height: 56px;
+$logo-width: $square-width;
+$folder-width: $square-width;
+$avatar-width: $square-width;
+
+$menu-text-padding: 18px;
+$radius: 10px;
+
+$duration: .3s;
+
+$subback: #f6f6f8;
+$second-level-navigation-background-color: rgba(244,245,247,0.2);
+
+$normal-text: #ccccd9;
+
+/* 主题色 */
+$primary: #4733F2;
+$success: #67c23a;
+$warning: #FFB76A;
+$danger: #FF5454;
+$info: #909399;
+$normal: #565682;
+$basic: #999999;
+
+
+/* 适配变量 */
+$pc: 96px;
+$pad: 56px;
+$mobile: 100vw / 12;

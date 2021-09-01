@@ -1,0 +1,14 @@
+{
+  "name": "@cyberspace.link/create-cyberspace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "gxlself",
+  "bin": {
+    "create-cyberspace": "./index.js"
+  },
+  "dependencies": {
+    "fs-extra": "^9.0.0",
+    "minimist": "^1.2.5"
+  }
+}

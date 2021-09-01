@@ -1,0 +1,81 @@
+@import './var.scss';
+@import './function.scss';
+
+/** 栅格化 12格 **/
+@for $idx from 1 through 12 {
+	.cj-col-#{$idx} {
+		@include lagerScreen{
+			width: $pc * $idx;
+		}
+		@include pc{
+			width: $pc * $idx;
+		}
+		@include pad{
+			width: $pad * $idx;
+		}
+		@include mobile{
+			width: $mobile * $idx;
+		}
+	}
+}
+
+#app {
+	-webkit-font-smoothing: antialiased;
+	height: 100%;
+}
+
+// CJUI整体修改
+.cj-pagination{
+	text-align: right;
+	margin-top: 20px;
+	white-space: normal;
+
+	@include mobile {
+		.btn-prev, .btn-next, .cj-pager{
+			margin-top: 16px;
+		}
+
+		.cj-pager{
+			li {
+				@include mobile {
+					min-width: 28px;
+				}
+			}
+		}
+
+		span.cj-pagination__total, span.cj-pagination__sizes{
+			width: calc((100% - 20px)/2);
+		}
+	}
+
+	&__sizes{
+		.cj-input{
+			margin: 0!important;
+			max-width: 100px;
+			&__inner{
+				height: 22px!important;
+				line-height: 22px!important;
+				padding: 4px 12px;
+			}
+			&.cj-input--mini .cj-input__icon{
+				line-height: 22px!important;
+			}
+		}
+	}
+}
+
+.primary{
+	color: $primary;
+}
+.success{
+	color: $success;
+}
+.warning{
+	color: $warning;
+}
+.danger{
+	color: $danger;
+}
+.info{
+	color: $info;
+}

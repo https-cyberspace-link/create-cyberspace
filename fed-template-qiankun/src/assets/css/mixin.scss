@@ -1,0 +1,21 @@
+@mixin FLex() {
+	display: flex;
+}
+
+@mixin FLexWrap() {
+	flex-wrap: wrap;
+}
+
+@mixin Ellipsis{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin MoreEllipsis($line) {
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+}
