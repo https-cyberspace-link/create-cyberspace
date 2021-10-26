@@ -15,13 +15,14 @@ const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length })
 
 donationConsole()
 module.exports = {
+  publicPath: '/template/',
   // 开发环境每次保存时是否输出为eslint编译警告
   lintOnSave: true,
   runtimeCompiler: true,
   productionSourceMap: false,
   // 开发环境端口号
   devServer: {
-    port: 20002,
+    port: 21000,
     disableHostCheck: true,
     overlay: {
       warnings: true,
@@ -36,8 +37,6 @@ module.exports = {
     config.plugins.delete('preload')
     config.plugins.delete('prefetch')
     config.resolve.symlinks(true)
-    // 解决ie11兼容ES6
-    // config.entry('main').add('babel-polyfill').add('es6-promise/auto')
 
     if (process.env.VUE_TYPE !== 'CM') {
       config.plugin('html').tap(args => {
